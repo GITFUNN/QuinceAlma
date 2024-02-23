@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-flowers {
+  background-position: center 50%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 640px) {
+  .bg-flowers {
+    background-size: cover;
+  }
+}
