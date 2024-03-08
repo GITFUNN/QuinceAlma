@@ -7,12 +7,18 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-      body : ['Pinyon Script', 'cursive'],
-      display:['Dancing Script','cursive'],
+      display : ['Madimi One', 'sans-serif'],
+      body:['Dancing Script','cursive'],
+      bodie:['Open Sans', 'sans-serif'],
+     bodiee:['Monsieur La Doulaise', 'cursive'],
 
       },
       backgroundImage:{
         'flowers': 'url("./src/assets/back.png")',
+        'golden':'url("./src/assets/back1.png")',
+        'photo01': 'url("./src/assets/foto01.png")',
+        'photo02': 'url("./src/assets/foto02.png")',
+        'photo03': 'url("./src/assets/foto03.png")', 
       }
 
     },
