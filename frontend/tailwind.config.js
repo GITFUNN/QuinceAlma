@@ -15,10 +15,12 @@ export default {
       },
       backgroundImage:{
         'flowers': 'url("./src/assets/back.png")',
+        'flowers2': 'url("./src/assets/back2.jpg")',
         'golden':'url("./src/assets/back1.png")',
         'photo01': 'url("./src/assets/foto01.png")',
         'photo02': 'url("./src/assets/foto02.png")',
-        'photo03': 'url("./src/assets/foto03.png")', 
+        'photo03': 'url("./src/assets/foto03.png")',
+        'photo04': 'url("./src/assets/foto04.jpg")',
       }
 
     },

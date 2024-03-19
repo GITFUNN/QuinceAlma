@@ -1,20 +1,20 @@
 import { createInvitationRequest,createSongRequest, getInvitationRequest, getThemeRequest } from '../api/general.ts'
 import React, { useState, useEffect, useRef } from "react";
 import { useMutation, useQuery,useQueryClient } from '@tanstack/react-query';
-import { motion, Variants } from 'framer-motion';
-import audio from '../audio/audio2.mp3';
+import { motion, SwitchLayoutGroupContext, Variants } from 'framer-motion';
+import audio from '../audio/audio3.mp3';
+import instragramicon from '../assets/Instagram_icon.png'
 
   
 let contador = 1; 
   const sound = new Audio(audio);
+  sound.loop=true;
 
 const MainPage = () => {
   const queryClient = useQueryClient();
   const [name, setName] = useState("");
   const [assist, setAssist] = useState(false);
   const [comments, setComments] = useState("");
-  const [check, setCheck] = useState(false);
-  const [check2, setCheck2] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [timerDays, setTimerDays] = useState('00');
   const [timerHours, setTimerHours] = useState('00');
@@ -180,6 +180,7 @@ const createMutationSong = useMutation({
 
   return (
     <div className="">
+      
       <div className='z-50 fixed right-0 md:p-6 p-2'>
         
         <button onClick={handleClick}>
@@ -243,64 +244,62 @@ const createMutationSong = useMutation({
 
         </div>
       </div>
-<div id="section2"className='flex flex-col justify-center items-center font-bodie '>
+<div id="section2"className='  flex flex-col justify-center items-center font-bodie bg-gradient-to-r from-white to-amber-50'>
         <div className=' pb-28 md:grid md:grid-cols-3 gap-2 md:max-xl:grid-cols-2'>
           <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ x: -150, opacity: 0 }}
+          whileInView={{ x:0, opacity:1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, type: "spring", bounce: 0.2, delay: 0.5 }}
-
+          transition={{ duration:1.2, type: "spring", bounce: 0.2, delay: 0.8 }}
 
         >
-          <div className='cursor-pointer h-96 w-96 my-1 justify-center items-center bg-photo01 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl '> </div>
+          <div className='cursor-pointer h-96 w-96 my-1 justify-center items-center bg-photo04 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl '> </div>
           </motion.div>
             <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y:0, opacity:1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, type: "spring", bounce: 0.2, delay: 0.5 }}
-
+          transition={{ duration:1.2, type: "spring", bounce: 0.2, delay: 0.8 }}
 
         >
-          <div className='h-96 w-96 my-1 justify-center items-center bg-photo02 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer '></div>
+          <div className='h-96 w-96 my-1 justify-center items-center bg-photo04 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer '></div>
 </motion.div>
 <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ x:150, opacity: 0 }}
+          whileInView={{ x:0, opacity:1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, type: "spring", bounce: 0.2, delay: 0.5 }}
-
+          transition={{ duration:1.2, type: "spring", bounce: 0.2, delay: 0.8 }}
 
         >
-          <div className='h-96 w-96 my-1 justify-center items-center bg-photo03 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer '></div>
+          <div className='h-96 w-96 my-1 justify-center items-center bg-photo04 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer '></div>
 </motion.div>
 <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{y:40, opacity: 0 }}
+          whileInView={{ y:0, opacity:1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, type: "spring", bounce: 0.2, delay: 0.5 }}
-
+          transition={{ duration:1.2, type: "spring", bounce: 0.2, delay: 0.5 }}
 
         >
-          <div className='h-96 w-96 my-1 justify-center items-center bg-photo01 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer '></div>
+          <div className='h-96 w-96 my-1 justify-center items-center bg-photo04 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer '></div>
 </motion.div>
 <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{y:40, opacity: 0 }}
+          whileInView={{ y:0, opacity:1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, type: "spring", bounce: 0.2, delay: 0.5 }}
->
-          <div className='h-96 w-96 my-1 justify-center items-center bg-photo02 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer '></div>
-</motion.div>
-<motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, type: "spring", bounce: 0.2, delay: 0.5 }}
->
+          transition={{ duration:1.2, type: "spring", bounce: 0.2, delay: 0.5 }}
 
-          <div   className='h-96 w-96 my-1 justify-center items-center bg-photo03 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer '></div>
+        >
+          <div className='h-96 w-96 my-1 justify-center items-center bg-photo04 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer '></div>
+</motion.div>
+<motion.div
+          initial={{y:40, opacity: 0 }}
+          whileInView={{ y:0, opacity:1 }}
+          viewport={{ once: true }}
+          transition={{ duration:1.2, type: "spring", bounce: 0.2, delay: 0.5 }}
+
+        >
+
+          <div   className='h-96 w-96 my-1 justify-center items-center bg-photo04 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer '></div>
 </motion.div>
 
         </div>
@@ -357,8 +356,14 @@ const createMutationSong = useMutation({
         >
           <h1 className='text-center text-3xl pb-4 text-amber-300 font-medium'>¿Que canción no puede faltar en la fiesta?</h1>
         </motion.div>
+        <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", bounce: 0.2, duration: 1, delay: 0.5 }}
+          >
                   <h2 className="flex justify-center sm:text-xl text-lg text-white rounded-full p-4 sm:bg-amber-400 mt-2 sm:hover:bg-amber-300 bg-amber-300 transition duration-150 cursor-pointer" onClick={() => setShow2(true)}>SUGERIR CANCIÓN</h2>
-
+</motion.div>
         {show2 &&
         <div className ="flex justify-center items-center fixed top-0 left-0 w-full h-full ">
          <div className ="z-50 border border-slate-300 rounded-lg absolute bg-white p-6 max-sm:w-11/12">
@@ -410,17 +415,24 @@ const createMutationSong = useMutation({
 
       </div>
       <div id ="section4"className="flex flex-col justify-center items-center p-16 font-serif bg-gradient-to-r from-amber-200 to-fuchsia-700">
-        <motion.div
+         <motion.div
+          initial={{ x: 150, opacity: 0 }}
+          whileInView={{ x:0, opacity:1 }}
+          viewport={{ once: true }}
+          transition={{ duration:0.8, type: "spring", bounce: 0.4, delay: 0.5 }}
+
+        >
+          <div className='flex justify-center pb-6'>
+            <img className="h-24 w-24" src ={instragramicon}></img>
+          </div>
+          </motion.div>
+          <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1.2, type: "spring", bounce: 0.4, delay: 0.5 }}
         >
-          <div className='flex justify-center pb-6'>
-           <svg className="h-24 w-24 fill-fuchsia-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg>
-          </div>
-            <h1 className='flex justify-center text-3xl pb-6 text-fuchsia-900'>INSTAGRAM</h1>
+            <h1 className='flex justify-center text-3xl pb-6 text-fuchsia-800/75 font-bodie font-medium'>INSTAGRAM</h1>
              
            
           
@@ -429,16 +441,6 @@ const createMutationSong = useMutation({
 
 
         </motion.div>
-        <div className='block justify-center text-center text-2xl pb-6 font-bodie font-extralight'>
-          <h3>Etiquetame para subir las fotos de recuerdos</h3>
-          <h3>que quieras compartir conmigo y las que</h3>
-          <h3>saques en mi cumple.</h3>
-         
-                     </div>
-                      <a className=" font-bodie flex justify-center text-xl text-white rounded-full p-2 bg-fuchsia-900 mt-2 hover:bg-fuchsia-800  transition duration-150 " href="https://www.instagram.com/alma.mug/" target="_blank">@alma.mug</a>  
-
-      </div>
-      <div className="flex flex-col justify-center items-center p-14 font-serif bg-gradient-to-r from-white to-amber-200">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -446,22 +448,56 @@ const createMutationSong = useMutation({
           transition={{ duration: 1.2, type: "spring", bounce: 0.4, delay: 0.5 }}
 
         >
+        <div className='block justify-center text-center text-2xl pb-6 font-bodie font-extralight text-fuchsia-900/100'>
+          <h3>Etiquetame para subir las fotos de recuerdos</h3>
+          <h3>que quieras compartir conmigo y las que</h3>
+          <h3>saques en mi cumple.</h3>
+         
+                     </div>
+                     </motion.div>
+                     <motion.div
+          initial={{ x:150, opacity: 0 }}
+          whileInView={{ x:0, opacity:1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, type: "spring", bounce: 0.4, delay: 0.5 }}
+
+        >
+                      <a className=" font-bodie flex justify-center text-xl text-white rounded-full p-2 bg-gradient-to-tr from-orange-400 to-fuchsia-700 mt-2 hover:bg-fuchsia-800  transition duration-150 " href="https://www.instagram.com/alma.mug/" target="_blank">@alma.mug</a>  
+</motion.div>
+      </div>
+      <div className="flex flex-col justify-center items-center p-14 font-serif bg-gradient-to-r from-white to-amber-200">
+        
           <div className='text-center block justify-center font-bodie'>
-          <h1 className='text-4xl text-amber-500'>Confirmar</h1>
-          <h1 className='text-4xl pb-6 text-amber-500'>asistencia</h1>
-          <div className='text-2xl pb-6 font-extralight'>
+            <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, type: "spring", bounce: 0.4, delay: 0.5 }}
+
+        >
+          <h1 className='text-4xl text-amber-500/75 font-bodie '>Confirmar</h1>
+          <h1 className='text-4xl pb-6 text-amber-500/75  font-bodie'>asistencia</h1>
+          <div className='text-2xl pb-6 font-extralight text-amber-500/100'>
           <h3>Confirmar tu asistencia es fundamental para mí</h3>
           <h3>Además, si tenés alguna restricción</h3>
           <h3>alimentaria, por favor</h3>
           <h3>hacemelo saber</h3>
+        
           </div>
-
+ </motion.div>
           <div className='relative'>
           </div>
-          
+           <motion.div
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y:0 ,opacity:1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, type: "spring", bounce: 0.4, delay: 0.5 }}
+
+        >
           <h2 className="font-medium flex justify-center sm:text-xl text-lg text-white rounded-full p-4 sm:bg-amber-400 mt-2 sm:hover:bg-amber-300 bg-amber-300 transition duration-150 cursor-pointer" onClick={() => setShow(true)}>CONFIRMAR ASISTENCIA</h2>
+          </motion.div>
           </div>
-        </motion.div>
+        
         {show &&
         <div className ="flex justify-center items-center fixed top-0 left-0 w-full h-full ">
          <div className ="z-50 border border-slate-300 rounded-lg absolute bg-white p-6 max-sm:w-11/12">
