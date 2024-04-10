@@ -4,4 +4,9 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  build: {
+    rollupOptions: {
+      external: ['/static/tema1.mp3'], // Agregar la ruta del archivo estático aquí
+    },
+  },
+});
