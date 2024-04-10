@@ -132,7 +132,7 @@ STATICFILES_DIRS = [
 
 
 CORS_ALLOWED_ORIGINS=[
- "https://misxv.com.ar/",
+ "https://misxv.com.ar",
     
 ]
 CORS_ALLOW_CREDENTIALS=True
