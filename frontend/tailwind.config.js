@@ -14,13 +14,13 @@ export default {
 
       },
       backgroundImage:{
-        'flowers': 'url("./src/assets/back.png")',
-        'flowers2': 'url("./src/assets/back2.jpg")',
-        'golden':'url("./src/assets/back1.png")',
-        'photo01': 'url("./src/assets/foto01.png")',
-        'photo02': 'url("./src/assets/foto02.png")',
-        'photo03': 'url("./src/assets/foto03.png")',
-        'photo04': 'url("./src/assets/foto04.jpg")',
+        'backAlma': 'url("/static/fotoAlma1.jpg")',
+        'photo1': 'url("/static/fotoAlma3.jpg")',
+        'photo2':'url("/static/fotoAlma4.jpg")',
+        'photo3': 'url("/static/fotoAlma5.jpg")',
+        'photo4': 'url("/static/fotoAlma6.jpg")',
+        'photo5': 'url("/static/fotoAlma8.jpg")',
+        'photo6': 'url("/static/fotoAlma9.jpg")',
       }
 
     },
