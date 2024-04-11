@@ -2,10 +2,8 @@ import { createInvitationRequest, createSongRequest } from "../api/general.ts";
 import React, { useState, useEffect, useRef } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { motion } from "framer-motion";
-import audio from "/static/tema1.webm";
 
-const sound = new Audio(audio);
-sound.loop = true;
+
 let contador = 1;
 
 const MainPage = () => {
@@ -22,8 +20,10 @@ const MainPage = () => {
   const [timerSeconds, setTimerSeconds] = useState<number>(0);
   const [name2, setName2] = useState("");
   const [song, setSong] = useState("");
-  const [isPaussed, setIsPaused] = useState(true);
+  const [isPaused, setIsPaused] = useState<boolean>(true);
   const [down, setDown] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
+
   let interval = useRef();
 
   console.log(scrollPosition);
@@ -67,6 +67,13 @@ const MainPage = () => {
       section_ = 4;
       setDown(true);
     }
+
+
+
+
+
+
+
 
     const section = document.getElementById(`section${section_}`);
     if (section) {
@@ -125,21 +132,42 @@ const MainPage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleClick = () => {
-    if (isPaussed == false) {
-      setIsPaused(true);
-      sound.pause();
-    } else {
-      setIsPaused(false);
-      sound.play();
+
+const handleAudioPlay = () => {
+    if (audioRef.current) {
+      if (audioRef.current.paused) {
+        audioRef.current
+          .play()
+          .then(() => {
+            setIsPaused(false);
+          })
+          .catch((error) => {
+            console.error("Error playing audio:", error);
+          });
+      } else {
+        audioRef.current.pause();
+        setIsPaused(true);
+      }
     }
   };
+
+
+
+
 
   return (
     <div className="">
       <div className="z-50 fixed right-0 md:p-6 p-2">
-        <button onClick={handleClick}>
-          {isPaussed && (
+
+        <audio ref={audioRef} id="audioPlayer">
+          <source src="/static/tema1.ogg" type="audio/ogg" />
+          <source src="/static/tema1.mp3" type="audio/mpeg" />
+          <source src="/static/tema1.opus" type="audio/opus" />
+          <source src="/static/tema1.webm" type="audio/webm" />
+        </audio>
+
+        <button onClick={handleAudioPlay}>
+          {isPaused ? (
             <svg
               className="md:h-16 md:w-16 h-12 w-12 fill-amber-400"
               xmlns="http://www.w3.org/2000/svg"
@@ -147,9 +175,7 @@ const MainPage = () => {
             >
               <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z" />
             </svg>
-          )}
-
-          {!isPaussed && (
+          ) : (
             <svg
               className="md:h-16 md:w-16 h-12 w-12 fill-amber-400"
               xmlns="http://www.w3.org/2000/svg"
@@ -159,6 +185,8 @@ const MainPage = () => {
             </svg>
           )}
         </button>
+
+
       </div>
       {!down && (
         <div
