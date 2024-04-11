@@ -190,7 +190,7 @@ const MainPage = () => {
       )}
       <div
         id="section0"
-        className="min-h-screen flex justify-center items-center bg-golden bg-fixed bg-cover"
+        className="min-h-screen flex justify-center items-center bg-backAlma bg-fixed bg-contain bg-center"
       >
         <div className="flex flex-col justify-center items-center ">
           <h1 className="text-8xl text-white sm:text-9xl select-none font-bodiee">
