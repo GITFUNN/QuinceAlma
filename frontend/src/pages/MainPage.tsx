@@ -2,7 +2,7 @@ import { createInvitationRequest, createSongRequest } from "../api/general.ts";
 import React, { useState, useEffect, useRef } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { motion } from "framer-motion";
-import audio from "/static/tema1.webm";
+import audio from "/static/tema1.opus";
 
 const sound = new Audio(audio);
 sound.loop = true;
