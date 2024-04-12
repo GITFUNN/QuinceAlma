@@ -246,7 +246,7 @@ const MainPage = () => {
             }}
           >
             <h2 className="text-amber-400 text-3xl pt-4 text-center">
-              22:00 HS
+              21:00 HS
             </h2>
             <h3 className="pt-4 text-nowrap font-bodie">
               La Usina, Gral. Galarza, Entre Ríos
