@@ -230,7 +230,7 @@ const MainPage = () => {
         >
           <h2 className="text-amber-400 text-3xl text-center">Sabado</h2>
           <h1 className="text-amber-200 text-6xl pt-2  font-extralight">
-            09.05.2024
+            11.05.2024
           </h1>
         </motion.div>
         <div>
