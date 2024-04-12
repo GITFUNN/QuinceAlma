@@ -143,8 +143,8 @@ const MainPage = () => {
   };
 
   return (
-    <div className="min-h-screen min-w-full">
-      <div className="z-50 fixed right-0 md:p-6 p-2">
+    <div className="">
+      <div className="z-50 fixed right-2 md:p-6 p-2 top-2">
         <audio ref={audioRef} id="audioPlayer">
           <source src="/static/tema1.ogg" type="audio/ogg" />
           <source src="/static/tema1.mp3" type="audio/mpeg" />
