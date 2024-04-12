@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import HomePage from "./pages/HomePage";
-import Lista from "./pages/AlmaList";
+import Lista1 from "./pages/AlmaList";
 import Layout from "./components/Layout";
 
 
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path = "/" element = {<Layout/>}>
         <Route path = "/alma" element = {<MainPage/>}/>
-        <Route path = "/alma/lista0000001" element = {<Lista/>}/>
+        <Route path = "/ambddb6fcvluxt3g1g35rn6wfumrtlr4q3v5cat9" element = {<Lista1/>}/>
         <Route index element = {<HomePage />} />
         </Route>
       </Routes>
