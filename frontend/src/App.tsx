@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path = "/" element = {<Layout/>}>
         <Route path = "/alma" element = {<MainPage/>}/>
-        <Route path = "/alma/AMbdDb6FCvlUxT3g1G35rn6wfUmrTLr4q3v5caT9" element = {<Lista/>}/>
+        <Route path = "/alma/lista0000001" element = {<Lista/>}/>
         <Route index element = {<HomePage />} />
         </Route>
       </Routes>
