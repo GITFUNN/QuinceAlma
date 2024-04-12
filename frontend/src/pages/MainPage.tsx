@@ -143,7 +143,7 @@ const MainPage = () => {
   };
 
   return (
-    <div className="">
+    <div className="min-h-screen min-w-full">
       <div className="z-50 fixed right-0 md:p-6 p-2">
         <audio ref={audioRef} id="audioPlayer">
           <source src="/static/tema1.ogg" type="audio/ogg" />
@@ -202,7 +202,7 @@ const MainPage = () => {
       )}
       <div
         id="section0"
-        className="min-h-screen flex justify-center items-center bg-backAlma bg-fixed bg-contain bg-no-repeat"
+        className="min-h-screen lg:bg-contain flex justify-center items-center bg-backAlma bg-fixed bg-cover bg-no-repeat"
       >
         <div className="flex flex-col justify-center items-center ">
           <h1 className="text-8xl text-white sm:text-9xl select-none font-bodiee">
