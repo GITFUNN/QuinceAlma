@@ -202,7 +202,7 @@ const MainPage = () => {
       )}
       <div
         id="section0"
-        className="min-h-screen flex justify-center items-center bg-backAlma bg-fixed bg-contain bg-center"
+        className="min-h-screen flex justify-center items-center bg-backAlma bg-fixed bg-contain bg-center bg-no-repeat"
       >
         <div className="flex flex-col justify-center items-center ">
           <h1 className="text-8xl text-white sm:text-9xl select-none font-bodiee">
@@ -289,7 +289,7 @@ const MainPage = () => {
               delay: 0.8,
             }}
           >
-            <div className="cursor-pointer h-96 w-96 my-1 justify-center items-center bg-photo03 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl ">
+            <div className="cursor-pointer h-96 w-96 my-1 justify-center items-center bg-photo3 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl ">
               {" "}
             </div>
           </motion.div>
@@ -304,7 +304,7 @@ const MainPage = () => {
               delay: 0.8,
             }}
           >
-            <div className="h-96 w-96 my-1 justify-center items-center bg-photo04 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer "></div>
+            <div className="h-96 w-96 my-1 justify-center items-center bg-photo4 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer "></div>
           </motion.div>
           <motion.div
             initial={{ x: 150, opacity: 0 }}
@@ -317,7 +317,7 @@ const MainPage = () => {
               delay: 0.8,
             }}
           >
-            <div className="h-96 w-96 my-1 justify-center items-center bg-photo05 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer "></div>
+            <div className="h-96 w-96 my-1 justify-center items-center bg-photo5 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer "></div>
           </motion.div>
           <motion.div
             initial={{ y: 40, opacity: 0 }}
@@ -330,7 +330,7 @@ const MainPage = () => {
               delay: 0.5,
             }}
           >
-            <div className="h-96 w-96 my-1 justify-center items-center bg-photo06 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer "></div>
+            <div className="h-96 w-96 my-1 justify-center items-center bg-photo6 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer "></div>
           </motion.div>
           <motion.div
             initial={{ y: 40, opacity: 0 }}
@@ -343,7 +343,7 @@ const MainPage = () => {
               delay: 0.5,
             }}
           >
-            <div className="h-96 w-96 my-1 justify-center items-center bg-photo08 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer "></div>
+            <div className="h-96 w-96 my-1 justify-center items-center bg-photo2 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer "></div>
           </motion.div>
           <motion.div
             initial={{ y: 40, opacity: 0 }}
@@ -356,7 +356,7 @@ const MainPage = () => {
               delay: 0.5,
             }}
           >
-            <div className="h-96 w-96 my-1 justify-center items-center bg-photo9 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer "></div>
+            <div className="h-96 w-96 my-1 justify-center items-center bg-photo1 bg-cover bg-center sm:hover:scale-105 transition duration-300 rounded-xl cursor-pointer "></div>
           </motion.div>
         </div>
       </div>
