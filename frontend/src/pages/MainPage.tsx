@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 
-
 let contador = 1;
 
 const MainPage = () => {
@@ -68,13 +67,6 @@ const MainPage = () => {
       setDown(true);
     }
 
-
-
-
-
-
-
-
     const section = document.getElementById(`section${section_}`);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -132,8 +124,7 @@ const MainPage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
-const handleAudioPlay = () => {
+  const handleAudioPlay = () => {
     if (audioRef.current) {
       if (audioRef.current.paused) {
         audioRef.current
@@ -151,14 +142,9 @@ const handleAudioPlay = () => {
     }
   };
 
-
-
-
-
   return (
     <div className="">
       <div className="z-50 fixed right-0 md:p-6 p-2">
-
         <audio ref={audioRef} id="audioPlayer">
           <source src="/static/tema1.ogg" type="audio/ogg" />
           <source src="/static/tema1.mp3" type="audio/mpeg" />
@@ -185,8 +171,6 @@ const handleAudioPlay = () => {
             </svg>
           )}
         </button>
-
-
       </div>
       {!down && (
         <div

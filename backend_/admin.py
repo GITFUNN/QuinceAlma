@@ -4,4 +4,4 @@ from .models import Invitation, Theme
 # Register your models here.
 
 admin.site.register(Invitation)
-admin.site.register(Theme)  
+admin.site.register(Theme)
