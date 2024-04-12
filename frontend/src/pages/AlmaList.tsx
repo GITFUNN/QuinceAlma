@@ -26,7 +26,7 @@ const Lista1 = () => {
     <div className="min-h-screen z-0">
       <div className="flex flex-col lg:flex-row items-center justify-center font-bodie">
         {/* Encabezado de la tabla para los datos de invitaciones */}
-        <table className="mt-6 justify-center mr-2 border-2 border-amber-300">
+        <table className="mt-6 justify-center mr-2 border-2 border-amber-300 overflow-x-auto">
           <thead className="border">
             <tr>
               <th className="px-6 border border-amber-300">Nombre Completo</th>
@@ -58,7 +58,7 @@ const Lista1 = () => {
         </table>
 
         {/* Encabezado de la tabla para los datos de temas */}
-        <table className="mt-6 justify-center border-2 border-amber-300">
+        <table className="mt-6 justify-center border-2 border-amber-300 overflow-x-auto">
           <thead className="border">
             <tr>
               <th className="px-6 border border-amber-300">Nombre Completo</th>
