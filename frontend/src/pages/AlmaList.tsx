@@ -24,7 +24,7 @@ const Lista1 = () => {
 
   return (
     <div className="min-h-screen z-0">
-      <div className="flex flex-row items-center justify-center font-bodie">
+      <div className="flex flex-col lg:flex-row items-center justify-center font-bodie">
         {/* Encabezado de la tabla para los datos de invitaciones */}
         <table className="mt-6 justify-center mr-2 border-2 border-amber-300">
           <thead className="border">
