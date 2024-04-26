@@ -1,4 +1,5 @@
-Technologies Used:
+Technologies Used
+
   React with Typescript Vite: library for the user interface.
   Django: Python web development framework.
   Tailwind CSS: CSS design framework. (Includes Tailwind CSS, not standard CSS)
